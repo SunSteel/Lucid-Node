@@ -1,0 +1,78 @@
+---
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+---
+
+<html lang="en" id="wrap">
+	<head>
+		<link rel="manifest" href="/manifest.json" />
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" href="images/icons/icon-192x192.png" />
+		<link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta property='og:title'  content='Lucid'>
+		<meta property='og:site_name' content='Lucid'>
+		<meta name="keywords" content="unblocker, games, proxy, vpn, nova, lucid unblocker, lucid">
+		<meta name="description" content="Lucid is an internet utility that provides more functionality for users. A Nova Service. ">
+		<title>Lucid</title>
+	</head>
+	<body>
+		<script>
+			if ("serviceWorker" in navigator) {
+				window.addEventListener("load", function () {
+					navigator.serviceWorker
+					.register("/sw.js")
+					.then(res => console.log("service worker registered"))
+					.catch(err => console.log("service worker not registered", err))
+					
+				})
+			}
+
+			if (localStorage.getItem("circumventionMethod") === null) {
+				var theme = "Luxury";
+			} else {
+				var theme = localStorage.getItem("themeMethod").toLowerCase()
+				const taggy = document.getElementById("wrap")
+				taggy.setAttribute("data-theme", theme)
+            }
+			
+		</script>
+
+		<Navbar />
+        <div id="container"> </div>
+		
+		<script>
+			if (localStorage.getItem("circumventionMethod") === null) {
+				localStorage.setItem("circumventionMethod", "UltraViolet")
+				localStorage.setItem("cloakingMethod", "Plain")
+				localStorage.setItem("tabMethod", "Lucid")
+				localStorage.setItem("themeMethod", "Luxury")
+			}
+
+		</script>
+    
+        <!-- its broken for some reason?? <script src="ruffle/ruffle.js"></script> -->
+        <script>
+            /// ?????? how do i make this work 💀💀💀
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            const params = Object.fromEntries(urlSearchParams.entries());
+            const urle = params.url;
+            window.RufflePlayer = window.RufflePlayer || {};
+            window.addEventListener("load", (event) => {
+                const ruffle = window.RufflePlayer.newest();
+                const player = ruffle.createPlayer();
+                const container = document.getElementById("container"); 
+                container.appendChild(player);
+                player.load({
+                    url: urle, 
+                    backgroundColor: "#000", 
+                });
+                player.style.width = "450px"; 
+                player.style.height = "450px";
+            });
+        </script>
+    
+	</body>
+</html>

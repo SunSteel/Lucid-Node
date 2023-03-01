@@ -1,0 +1,22 @@
+{
+    "name": "Lucid App",
+    "short_name": "Lucid",
+    "icons": [
+        {
+            "src": "/images/192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+    {
+        "src": "/images/512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }
+    ],
+    "theme_color": "#dca54c",
+    "background_color": "#171618",
+    "start_url": "/",
+    "display": "standalone",
+    "oreintation": "portrait"
+}

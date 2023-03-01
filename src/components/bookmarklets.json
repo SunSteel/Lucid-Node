@@ -1,0 +1,7 @@
+[
+    {
+        "name": "History Flooder",
+        "description": "A bookmark that floods your history with a lot of entries",
+        "bookmarklet": "javscript:"
+    }
+]
