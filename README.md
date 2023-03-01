@@ -20,3 +20,4 @@ Overall, Lucid is a powerful and innovative web proxy and unblocker that combine
 <br>
 [![Deploy To Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/novarepo/Lucid-Node&branch=master&name=Lucid-Node)
 
+ps: thanks to radon games for the games.json
